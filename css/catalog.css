@@ -1,0 +1,127 @@
+
+.waveContainer 
+{
+    position: fixed ;
+    bottom: 0 ;
+    right: 0 ;
+    transform: rotate(-80deg) ;
+    transform: rotateZ(-30deg) ; 
+    z-index: -2 ;
+}
+
+.wave 
+{
+    position: absolute ;
+    opacity: 0.4 ;
+    width: 2000px ;
+    height: 2300px ;
+    top: -800px ;
+    left: -1200px ;
+    border-radius: 43% ;
+}
+
+@keyframes rotate 
+{
+    from 
+{ transform: rotate(0deg) ; }
+    from 
+{ transform: rotate(360deg) ; }
+}
+
+#waveOne 
+{
+    animation: rotate 8000ms infinite linear ;
+    opacity: 0.5 ;
+    background: #0af ;
+}
+
+#waveTwo 
+{
+    animation: rotate 5000ms infinite linear ;
+    opacity: 0.4 ;
+    background: rgb(3, 2, 51) ;
+}
+
+
+.product_tile 
+{
+  position: relative;
+  color: black;
+  margin: 50px 0px;
+  overflow: hidden;
+}
+
+.image_text
+{
+	position:relative;
+	right:-70px;
+}
+.product-tile-name
+{
+	color:black;
+}
+
+#left-content
+{
+	background-color:white;
+	width:34%;
+	bottom:-37px;
+	right:-70px;
+	margin:30px;
+	position:relative;
+	
+}
+.img_container1 img
+{
+	width:400px;
+	height:250px;
+}
+
+.img_container img
+{
+	width:400px;
+	height:250px;
+}
+
+.product-price-num
+{ 
+	position:relative;
+	right:-70px;
+	color: blue;
+}
+.product-button-container
+{
+	position:relative;
+	right:-40px; 
+	background-color:#5A8CB1;
+	color:#000000;
+	width:93px;
+	height:20px;
+}
+#center-content
+{
+	background-color:white;
+	float:right;
+	top:-1000px;
+	right:400px;
+	margin:30px;
+	position:relative;
+	width:33%;
+	
+}
+#right-content
+{
+	
+	background-color:white;
+	float:right;
+	top:-1011px;
+	right:-596px;
+	margin:23px;
+	padding-top:17x;
+	padding-bottom:18px;
+	position:relative;
+	width:31.5%;
+	
+}
+
+

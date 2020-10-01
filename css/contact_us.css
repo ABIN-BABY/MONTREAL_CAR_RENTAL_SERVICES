@@ -1,0 +1,353 @@
+.waveContainer 
+{
+    position: fixed ;
+    bottom: 0 ;
+    right: 0 ;
+    transform: rotate(-80deg) ;
+    transform: rotateZ(-30deg) ; 
+    z-index: -2 ;
+}
+
+.wave 
+{
+    position: absolute ;
+    opacity: 0.4 ;
+    width: 2000px ;
+    height: 2300px ;
+    top: -800px ;
+    left: -1200px ;
+    border-radius: 43% ;
+}
+
+@keyframes rotate 
+{
+    from { transform: rotate(0deg); }
+    from { transform: rotate(360deg); }
+}
+
+#waveOne 
+{
+    animation: rotate 8000ms infinite linear ;
+    opacity: 0.5 ;
+    background: #0af ;
+}
+
+#waveTwo 
+{
+    animation: rotate 5000ms infinite linear ;
+    opacity: 0.4 ;
+    background: rgb(3, 2, 51) ;
+}
+
+@font-face 
+{
+  font-family: contactFont;
+  src: url("poppins-regular.woff");
+}
+
+.contact input, .contact textarea, .contact select, .contact option 
+{
+  font-family: contactFont, serif;
+}
+
+.contact 
+{
+  font-family: contactFont, serif;
+  margin: 25px,25px,25px,25px;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #B0B0B0;
+}
+
+.contact div 
+{
+  display: block;
+}
+
+/*wrapping container*/
+
+.contact .cont-wrap 
+{
+  width: 92%;
+  background: #222222;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  margin-left: 65px;
+  flex-direction: row-reverse;
+}
+
+/*right container with inputs*/
+
+.contact .cont-right 
+{
+  width: 42%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 56px 55px 63px;
+  border: 3px solid grey;
+  position:relative;
+}
+
+.contact .cont-right #cont-title 
+{
+  width: 100%;
+  display: block;
+  font-size: 30px;
+  line-height: 1.2;
+  text-align: center;
+  padding-bottom: 33px;
+}
+
+.contact .cont-right .label-input 
+{
+  font-size: 15px;
+  color: #555;
+  line-height: 1.2;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 25px;
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+
+.contact .cont-right .wrap-input 
+{
+  position: relative;
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.contact input, .contact select 
+{
+  outline: none;
+  border: none;
+  overflow: visible;
+}
+
+.contact .cont-right .cont-input 
+{
+  height: 40px;
+  display: block;
+  width: 100%;
+  background: 0 0;
+  font-size: 18px;
+  color: #666;
+  line-height: 1.2;
+  padding: 0 25px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.contact .cont-right .focus-input 
+{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #4caf50;
+  transition: 0.4s;
+}
+
+.contact .cont-right .focus-input:focus
+{
+  border: none;
+}
+
+.contact .cont-right .cont-input:focus~.focus-input 
+{
+  width: 100%;
+  transition: 0.4s;
+}
+
+.contact .cont-right .label-radio-contain 
+{
+  width: 100%;
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: 1px;
+}
+
+/* Hide the browser's default radio button */
+
+.contact .cont-right .label-radio-contain input 
+{
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+
+.contact .cont-right .cont-radio-btn 
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+
+.contact .cont-right .label-radio-contain:hover input~.cont-radio-btn 
+{
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+
+.contact .cont-right .label-radio-contain input:checked~.cont-radio-btn 
+{
+  background-color: #B0B0B0;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+
+.cont-radio-btn:after 
+{
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+
+.contact .cont-right .label-radio-contain input:checked~.cont-radio-btn:after 
+{
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+
+.contact .cont-right .label-radio-contain .cont-radio-btn:after 
+{
+  top: 7px;
+  left: 6px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: black;
+}
+
+.contact .cont-right textarea 
+{
+  height: 180px!important;
+  outline: none;
+  transition: .5s;
+}
+
+.contact .cont-right textarea:focus 
+{
+  outline: 2px solid #4caf50;
+}
+
+.contact .cont-right .cont-checkbox 
+{
+  transform: scale(1.5);
+  margin-right: 15px;
+}
+
+/*Submit Button*/
+
+.contact .cont-right .wrap-submit-btn 
+{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 23px;
+}
+
+.contact .cont-right input[type="submit"] 
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  min-width: 200px;
+  height: 50px;
+  font-size: 12px;
+  background: #00ad5f;
+  color: #fff;
+  line-height: 1.2;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.contact .cont-right input[type="submit"]:hover 
+{
+  transition: .5s;
+  opacity: .7;
+}
+
+/*Style for the left side of the contact form*/
+
+.contact .cont-left 
+{
+  background-image: url("../images/intro-2.jpg");
+  width: 34%;
+  display: block;
+  padding: 56px 55px 63px;
+  color: #eceff1;
+  position:absolute;
+  height:877px;
+  float:right;
+  left:70px;
+  border-right: 3px solid white;
+  border:3px solid grey;
+}
+
+/*icon settings*/
+
+.contact .cont-left .cont-span i 
+{
+  font-size: 25px;
+}
+
+.contact .cont-left h4 
+{
+  font-size: 20px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+/*green tag*/
+
+.contact .cont-left .green 
+{
+  color: #00ad5f;
+}
+
+/*removing link color*/
+
+.contact .cont-left a 
+{
+  text-decoration: none;
+}
+
+.contact .cont-left .cont-span 
+{
+  width: 100%;
+  padding-bottom: 50px;
+}
+
+/*map settings*/
+
+.contact .cont-left iframe 
+{
+  border: 1px solid #00ad5f;
+  width: 490px;
+  height: 450px;
+}

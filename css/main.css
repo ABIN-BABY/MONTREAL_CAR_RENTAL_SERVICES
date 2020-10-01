@@ -1,0 +1,79 @@
+body
+{
+  background-color:solid Orange;
+}
+
+
+#main
+{
+  overflow: hidden;
+  background-color: white;
+  color:black;
+  padding: 10px;
+  margin-top: 17px;
+}
+h1
+{
+  text-align: center;
+}
+
+#icon
+{
+  width:3vw;
+}
+
+#icon1
+{
+  width:3vw;
+}
+
+
+
+.waveContainer
+{
+    position: fixed ;
+    bottom: 0 ;
+    right: 0 ;
+    transform: rotate(-80deg) ;
+    transform: rotateZ(-30deg) ; 
+    z-index: -2 ;
+}
+
+.wave 
+{
+    position: absolute ;
+    opacity: 0.4 ;
+    width: 2000px ;
+    height: 2300px ;
+    top: -800px ;
+    left: -1200px ;
+    border-radius: 43% ;
+}
+
+@keyframes rotate 
+{
+    from { transform: rotate(0deg) ; }
+    from { transform: rotate(360deg) ; }
+}
+
+#waveOne 
+{
+    animation: rotate 8000ms infinite linear ;
+    opacity: 0.5 ;
+    background: #0af ;
+}
+
+#waveTwo 
+{
+    animation: rotate 5000ms infinite linear ;
+    opacity: 0.4 ;
+    background: rgb(3, 2, 51) ;
+}
+
+#waveThrees 
+{
+    animation: rotate 8500ms infinite linear ;
+    background-color: #09317c ;
+}
+
+

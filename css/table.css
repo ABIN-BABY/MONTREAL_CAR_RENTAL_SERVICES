@@ -1,0 +1,33 @@
+.table
+{
+	background-color:black;
+	margin-top:17px;
+	padding:10px;
+
+}
+table tr th
+{
+	border:1px solid white;
+	padding:10px;
+}
+
+td
+{
+	
+	border:1px solid white;
+	text-align:center;
+}
+th
+{
+	color:#008ae6;
+}
+tr
+{
+	color:#73e600
+
+;
+}
+#pink_row
+{
+	color:#e60073;
+}
